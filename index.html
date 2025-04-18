@@ -18,8 +18,8 @@
   </style>
 </head>
 <body onclick="goFullScreen(document.documentElement)">
-  <!-- Ses dosyasını ekle -->
-  <audio id="myAudio" src="alpdadasim.mp3"></audio>
+  <!-- Yeni ses dosyası -->
+  <audio id="myAudio" src="alp.mp3"></audio>
 
   <script>
     function goFullScreen(element) {
@@ -31,7 +31,7 @@
         element.msRequestFullscreen();
       }
 
-      // Ses dosyasını baştan başlat ve oynat
+      // Ses dosyasını başlat
       let audio = document.getElementById("myAudio");
       audio.currentTime = 0; // Baştan başlat
       audio.play();
