@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Türk Bayrağı</title>
+</head>
+<body onclick="goFullScreen(this)" 
+  style="margin:0; padding:0; height:100vh; background-image:url('kurt-bayrak.jpg'); background-size:cover; background-position:center; cursor:pointer; background-repeat:no-repeat; background-color:black;">
+  
+  <script>
+    function goFullScreen(element) {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
