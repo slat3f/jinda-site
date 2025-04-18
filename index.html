@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Türk Bayrağı</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-image: url('kurt-bayrak.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: black;
+    }
+  </style>
 </head>
-<body onclick="goFullScreen(this)" 
-  style="margin:0; padding:0; height:100vh; background-image:url('kurt-bayrak.jpg'); background-size:cover; background-position:center; cursor:pointer; background-repeat:no-repeat; background-color:black;">
+<body onclick="goFullScreen(document.documentElement)">
   
   <script>
     function goFullScreen(element) {
@@ -16,7 +28,13 @@
       } else if (element.msRequestFullscreen) {
         element.msRequestFullscreen();
       }
+
+      // Tam ekran moduna geçtikten sonra arka planı tekrar yükle
+      setTimeout(() => {
+        document.body.style.backgroundImage = "url('kurt-bayrak.jpg')";
+      }, 100);
     }
   </script>
+
 </body>
-</html>
+</html> 
