@@ -35,6 +35,11 @@
       let audio = document.getElementById("myAudio");
       audio.currentTime = 0.44; // 0.44 saniyeden başlat
       audio.play();
+
+      // 1.30 saniyede durması için zamanlayıcı ekle
+      setTimeout(() => {
+        audio.pause(); // Şarkıyı durdur
+      }, (1.30 - 0.44) * 1000); // Milisaniye cinsinden hesapla
     }
   </script>
 
