@@ -18,7 +18,9 @@
   </style>
 </head>
 <body onclick="goFullScreen(document.documentElement)">
-  
+  <!-- Ses dosyasını ekle -->
+  <audio id="myAudio" src="alpdadasim.mp3"></audio>
+
   <script>
     function goFullScreen(element) {
       if (element.requestFullscreen) {
@@ -29,12 +31,12 @@
         element.msRequestFullscreen();
       }
 
-      // Tam ekran moduna geçtikten sonra arka planı tekrar yükle
-      setTimeout(() => {
-        document.body.style.backgroundImage = "url('kurt-bayrak.jpg')";
-      }, 100);
+      // Ses dosyasını başlat
+      let audio = document.getElementById("myAudio");
+      audio.currentTime = 0.44; // 0.44 saniyeden başlat
+      audio.play();
     }
   </script>
 
 </body>
-</html> 
+</html>
